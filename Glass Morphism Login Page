@@ -1,0 +1,743 @@
+******************************* HTML PART ****************************************************************
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/MERN 301/Day 20/Style/login.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Login form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box" data-tilt>
+        <!--Social icons-->
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="http://google.com" target="_blank"
+          ><i class="fa-brands fa-google"></i
+        ></a>
+        <a href="https://x.com" target="_blank"
+          ><i class="fa-brands fa-twitter"></i
+        ></a>
+        <!--End of Social icons box-->
+      </div>
+      
+      <div class="box-login">
+        <div class="top-header">
+         <h3>Login Now</h3>
+         <small>We are happy to have you back.</small>
+      </div>
+
+      <!--Input boxes in form tag-->
+      <form action="#" method="get">
+        <div class="input-group">
+          <div class="input-field">
+            <input type="text" name="username" id="username" class="input-box" required>
+            <label for="username">Username</label>
+          </div>
+          <div class="input-group">
+            <div class="input-field">
+              <input type="password" name="password" id="password" class="input-box" required>
+              <label for="password">Password</label>
+            </div>
+            <div class="remember">
+              <input type="checkbox" name="chk" id="chk" class="check">
+              <label for="chk">Remember Me</label>
+            </div>
+            <div class="input-field">
+              <input type="submit" value="Log in" class="input-submit" id="login" >
+
+            </div>
+            <div class="forgot">
+              <a href="#">Forget password?</a>
+            </div>
+         <!--End of input group-->   
+          <div>
+            <a href="register.html" target="_blank">
+         <input type="button" value="Register" class="input-submit" id="register">
+        </a>
+        </div>
+        </div>
+      </form>
+      <!--End of login box-->
+      </div>
+      <div class="box-register">
+        <span id="new-user">New User?
+        </span>
+        
+      </div>
+    </div>
+      <!--Container Ends Here-->
+    </div>
+    <script type="text/javascript" src="/MERN 301/Day 20/script/script.js"></script>
+    </body>
+
+</html>
+************************************************ CSS PART **********************************************************************
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+  background: url(../Image/login.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.box {
+  display: flex;
+  position: relative;
+  padding: 60px 20px 30px 20px;
+  height: 550px;
+  width: 365px;
+  background-color: transparent;
+  border-radius: 30px;
+  backdrop-filter: blur(8px);
+  border: 3px solid rgba(225, 225, 225, 0.5);
+}
+.social-icons {
+  position: absolute;
+  font-size: 25px;
+  top: 40px;
+  left: 32%;
+  letter-spacing: 10px;
+}
+.social-icons a {
+  text-decoration: none;
+  color: black;
+}
+.social-icons i:hover {
+  color: white;
+  cursor: pointer;
+  font-size: 2em;
+  transition: 0.7s ease-in-out;
+}
+.box-login {
+  position: absolute;
+  width: 85%;
+  left: 27px;
+  transition: 0.5s ease-in-out;
+}
+.box-register {
+  position: absolute;
+  width: 100%;
+  bottom: 50px;
+  transition: 0.5s ease-in-out;
+  text-align: center;
+}
+.top-header {
+  text-align: center;
+  margin: 30px 0;
+}
+.top-header h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.top-header h3:hover {
+  font-size: 1.2em;
+  color: rgb(211, 183, 183);
+}
+.top-header small:hover {
+  font-size: 1.1em;
+  color: rgb(211, 183, 183);
+}
+.input-field {
+  margin: 15px 0;
+  position: relative;
+}
+.input-box {
+  width: 100%;
+  height: 50px;
+  font-size: 15px;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  padding: 7px 45px 0px 20px;
+  background: rgba(91, 72, 72, 0.6);
+  backdrop-filter: blur(2px);
+  outline: none;
+}
+.input-field label {
+  position: absolute;
+  top: 15px;
+  left: 30px;
+  font-size: 20px;
+  transition: 0.5s ease-in-out;
+}
+.input-box:focus ~ label,
+.input-box:valid ~ label {
+  top: 2px;
+  font-size: 10px;
+  color: rgb(245, 247, 247);
+  font-weight: 500;
+}
+.remember :hover {
+  font-size: 1.5em;
+  color: white;
+}
+.input-submit {
+  width: 100%;
+  height: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  background: linear-gradient(145deg, rgb(100, 39, 39), white);
+  cursor: pointer;
+  transition: 0.6s ease-in-out;
+}
+.input-submit:hover {
+  font-size: 1.3em;
+  color: rgb(188, 179, 179);
+  box-shadow: 0px 4px 20px rgb(92, 21, 21);
+}
+.forgot {
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+.forgot a {
+  text-decoration: none;
+  color: rgb(36, 31, 31);
+}
+#new-user {
+  font-family: cursive;
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 10px;
+}
+***************************************************** JS PART ************************************************************
+var VanillaTilt = (function () {
+  'use strict';
+  
+  var classCallCheck = function (instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  };
+  
+  /**
+   * Created by Sergiu Șandor (micku7zu) on 1/27/2017.
+   * Original idea: https://github.com/gijsroge/tilt.js
+   * MIT License.
+   * Version 1.8.1
+   */
+  
+  var VanillaTilt = function () {
+    function VanillaTilt(element) {
+      var settings = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      classCallCheck(this, VanillaTilt);
+  
+      if (!(element instanceof Node)) {
+        throw "Can't initialize VanillaTilt because " + element + " is not a Node.";
+      }
+  
+      this.width = null;
+      this.height = null;
+      this.clientWidth = null;
+      this.clientHeight = null;
+      this.left = null;
+      this.top = null;
+  
+      // for Gyroscope sampling
+      this.gammazero = null;
+      this.betazero = null;
+      this.lastgammazero = null;
+      this.lastbetazero = null;
+  
+      this.transitionTimeout = null;
+      this.updateCall = null;
+      this.event = null;
+  
+      this.updateBind = this.update.bind(this);
+      this.resetBind = this.reset.bind(this);
+  
+      this.element = element;
+      this.settings = this.extendSettings(settings);
+  
+      this.reverse = this.settings.reverse ? -1 : 1;
+      this.resetToStart = VanillaTilt.isSettingTrue(this.settings["reset-to-start"]);
+      this.glare = VanillaTilt.isSettingTrue(this.settings.glare);
+      this.glarePrerender = VanillaTilt.isSettingTrue(this.settings["glare-prerender"]);
+      this.fullPageListening = VanillaTilt.isSettingTrue(this.settings["full-page-listening"]);
+      this.gyroscope = VanillaTilt.isSettingTrue(this.settings.gyroscope);
+      this.gyroscopeSamples = this.settings.gyroscopeSamples;
+  
+      this.elementListener = this.getElementListener();
+  
+      if (this.glare) {
+        this.prepareGlare();
+      }
+  
+      if (this.fullPageListening) {
+        this.updateClientSize();
+      }
+  
+      this.addEventListeners();
+      this.reset();
+  
+      if (this.resetToStart === false) {
+        this.settings.startX = 0;
+        this.settings.startY = 0;
+      }
+    }
+  
+    VanillaTilt.isSettingTrue = function isSettingTrue(setting) {
+      return setting === "" || setting === true || setting === 1;
+    };
+  
+    /**
+     * Method returns element what will be listen mouse events
+     * @return {Node}
+     */
+  
+  
+    VanillaTilt.prototype.getElementListener = function getElementListener() {
+      if (this.fullPageListening) {
+        return window.document;
+      }
+  
+      if (typeof this.settings["mouse-event-element"] === "string") {
+        var mouseEventElement = document.querySelector(this.settings["mouse-event-element"]);
+  
+        if (mouseEventElement) {
+          return mouseEventElement;
+        }
+      }
+  
+      if (this.settings["mouse-event-element"] instanceof Node) {
+        return this.settings["mouse-event-element"];
+      }
+  
+      return this.element;
+    };
+  
+    /**
+     * Method set listen methods for this.elementListener
+     * @return {Node}
+     */
+  
+  
+    VanillaTilt.prototype.addEventListeners = function addEventListeners() {
+      this.onMouseEnterBind = this.onMouseEnter.bind(this);
+      this.onMouseMoveBind = this.onMouseMove.bind(this);
+      this.onMouseLeaveBind = this.onMouseLeave.bind(this);
+      this.onWindowResizeBind = this.onWindowResize.bind(this);
+      this.onDeviceOrientationBind = this.onDeviceOrientation.bind(this);
+  
+      this.elementListener.addEventListener("mouseenter", this.onMouseEnterBind);
+      this.elementListener.addEventListener("mouseleave", this.onMouseLeaveBind);
+      this.elementListener.addEventListener("mousemove", this.onMouseMoveBind);
+  
+      if (this.glare || this.fullPageListening) {
+        window.addEventListener("resize", this.onWindowResizeBind);
+      }
+  
+      if (this.gyroscope) {
+        window.addEventListener("deviceorientation", this.onDeviceOrientationBind);
+      }
+    };
+  
+    /**
+     * Method remove event listeners from current this.elementListener
+     */
+  
+  
+    VanillaTilt.prototype.removeEventListeners = function removeEventListeners() {
+      this.elementListener.removeEventListener("mouseenter", this.onMouseEnterBind);
+      this.elementListener.removeEventListener("mouseleave", this.onMouseLeaveBind);
+      this.elementListener.removeEventListener("mousemove", this.onMouseMoveBind);
+  
+      if (this.gyroscope) {
+        window.removeEventListener("deviceorientation", this.onDeviceOrientationBind);
+      }
+  
+      if (this.glare || this.fullPageListening) {
+        window.removeEventListener("resize", this.onWindowResizeBind);
+      }
+    };
+  
+    VanillaTilt.prototype.destroy = function destroy() {
+      clearTimeout(this.transitionTimeout);
+      if (this.updateCall !== null) {
+        cancelAnimationFrame(this.updateCall);
+      }
+  
+      this.element.style.willChange = "";
+      this.element.style.transition = "";
+      this.element.style.transform = "";
+      this.resetGlare();
+  
+      this.removeEventListeners();
+      this.element.vanillaTilt = null;
+      delete this.element.vanillaTilt;
+  
+      this.element = null;
+    };
+  
+    VanillaTilt.prototype.onDeviceOrientation = function onDeviceOrientation(event) {
+      if (event.gamma === null || event.beta === null) {
+        return;
+      }
+  
+      this.updateElementPosition();
+  
+      if (this.gyroscopeSamples > 0) {
+        this.lastgammazero = this.gammazero;
+        this.lastbetazero = this.betazero;
+  
+        if (this.gammazero === null) {
+          this.gammazero = event.gamma;
+          this.betazero = event.beta;
+        } else {
+          this.gammazero = (event.gamma + this.lastgammazero) / 2;
+          this.betazero = (event.beta + this.lastbetazero) / 2;
+        }
+  
+        this.gyroscopeSamples -= 1;
+      }
+  
+      var totalAngleX = this.settings.gyroscopeMaxAngleX - this.settings.gyroscopeMinAngleX;
+      var totalAngleY = this.settings.gyroscopeMaxAngleY - this.settings.gyroscopeMinAngleY;
+  
+      var degreesPerPixelX = totalAngleX / this.width;
+      var degreesPerPixelY = totalAngleY / this.height;
+  
+      var angleX = event.gamma - (this.settings.gyroscopeMinAngleX + this.gammazero);
+      var angleY = event.beta - (this.settings.gyroscopeMinAngleY + this.betazero);
+  
+      var posX = angleX / degreesPerPixelX;
+      var posY = angleY / degreesPerPixelY;
+  
+      if (this.updateCall !== null) {
+        cancelAnimationFrame(this.updateCall);
+      }
+  
+      this.event = {
+        clientX: posX + this.left,
+        clientY: posY + this.top
+      };
+  
+      this.updateCall = requestAnimationFrame(this.updateBind);
+    };
+  
+    VanillaTilt.prototype.onMouseEnter = function onMouseEnter() {
+      this.updateElementPosition();
+      this.element.style.willChange = "transform";
+      this.setTransition();
+    };
+  
+    VanillaTilt.prototype.onMouseMove = function onMouseMove(event) {
+      if (this.updateCall !== null) {
+        cancelAnimationFrame(this.updateCall);
+      }
+  
+      this.event = event;
+      this.updateCall = requestAnimationFrame(this.updateBind);
+    };
+  
+    VanillaTilt.prototype.onMouseLeave = function onMouseLeave() {
+      this.setTransition();
+  
+      if (this.settings.reset) {
+        requestAnimationFrame(this.resetBind);
+      }
+    };
+  
+    VanillaTilt.prototype.reset = function reset() {
+      this.onMouseEnter();
+  
+      if (this.fullPageListening) {
+        this.event = {
+          clientX: (this.settings.startX + this.settings.max) / (2 * this.settings.max) * this.clientWidth,
+          clientY: (this.settings.startY + this.settings.max) / (2 * this.settings.max) * this.clientHeight
+        };
+      } else {
+        this.event = {
+          clientX: this.left + (this.settings.startX + this.settings.max) / (2 * this.settings.max) * this.width,
+          clientY: this.top + (this.settings.startY + this.settings.max) / (2 * this.settings.max) * this.height
+        };
+      }
+  
+      var backupScale = this.settings.scale;
+      this.settings.scale = 1;
+      this.update();
+      this.settings.scale = backupScale;
+      this.resetGlare();
+    };
+  
+    VanillaTilt.prototype.resetGlare = function resetGlare() {
+      if (this.glare) {
+        this.glareElement.style.transform = "rotate(180deg) translate(-50%, -50%)";
+        this.glareElement.style.opacity = "0";
+      }
+    };
+  
+    VanillaTilt.prototype.getValues = function getValues() {
+      var x = void 0,
+          y = void 0;
+  
+      if (this.fullPageListening) {
+        x = this.event.clientX / this.clientWidth;
+        y = this.event.clientY / this.clientHeight;
+      } else {
+        x = (this.event.clientX - this.left) / this.width;
+        y = (this.event.clientY - this.top) / this.height;
+      }
+  
+      x = Math.min(Math.max(x, 0), 1);
+      y = Math.min(Math.max(y, 0), 1);
+  
+      var tiltX = (this.reverse * (this.settings.max - x * this.settings.max * 2)).toFixed(2);
+      var tiltY = (this.reverse * (y * this.settings.max * 2 - this.settings.max)).toFixed(2);
+      var angle = Math.atan2(this.event.clientX - (this.left + this.width / 2), -(this.event.clientY - (this.top + this.height / 2))) * (180 / Math.PI);
+  
+      return {
+        tiltX: tiltX,
+        tiltY: tiltY,
+        percentageX: x * 100,
+        percentageY: y * 100,
+        angle: angle
+      };
+    };
+  
+    VanillaTilt.prototype.updateElementPosition = function updateElementPosition() {
+      var rect = this.element.getBoundingClientRect();
+  
+      this.width = this.element.offsetWidth;
+      this.height = this.element.offsetHeight;
+      this.left = rect.left;
+      this.top = rect.top;
+    };
+  
+    VanillaTilt.prototype.update = function update() {
+      var values = this.getValues();
+  
+      this.element.style.transform = "perspective(" + this.settings.perspective + "px) " + "rotateX(" + (this.settings.axis === "x" ? 0 : values.tiltY) + "deg) " + "rotateY(" + (this.settings.axis === "y" ? 0 : values.tiltX) + "deg) " + "scale3d(" + this.settings.scale + ", " + this.settings.scale + ", " + this.settings.scale + ")";
+  
+      if (this.glare) {
+        this.glareElement.style.transform = "rotate(" + values.angle + "deg) translate(-50%, -50%)";
+        this.glareElement.style.opacity = "" + values.percentageY * this.settings["max-glare"] / 100;
+      }
+  
+      this.element.dispatchEvent(new CustomEvent("tiltChange", {
+        "detail": values
+      }));
+  
+      this.updateCall = null;
+    };
+  
+    /**
+     * Appends the glare element (if glarePrerender equals false)
+     * and sets the default style
+     */
+  
+  
+    VanillaTilt.prototype.prepareGlare = function prepareGlare() {
+      // If option pre-render is enabled we assume all html/css is present for an optimal glare effect.
+      if (!this.glarePrerender) {
+        // Create glare element
+        var jsTiltGlare = document.createElement("div");
+        jsTiltGlare.classList.add("js-tilt-glare");
+  
+        var jsTiltGlareInner = document.createElement("div");
+        jsTiltGlareInner.classList.add("js-tilt-glare-inner");
+  
+        jsTiltGlare.appendChild(jsTiltGlareInner);
+        this.element.appendChild(jsTiltGlare);
+      }
+  
+      this.glareElementWrapper = this.element.querySelector(".js-tilt-glare");
+      this.glareElement = this.element.querySelector(".js-tilt-glare-inner");
+  
+      if (this.glarePrerender) {
+        return;
+      }
+  
+      Object.assign(this.glareElementWrapper.style, {
+        "position": "absolute",
+        "top": "0",
+        "left": "0",
+        "width": "100%",
+        "height": "100%",
+        "overflow": "hidden",
+        "pointer-events": "none",
+        "border-radius": "inherit"
+      });
+  
+      Object.assign(this.glareElement.style, {
+        "position": "absolute",
+        "top": "50%",
+        "left": "50%",
+        "pointer-events": "none",
+        "background-image": "linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)",
+        "transform": "rotate(180deg) translate(-50%, -50%)",
+        "transform-origin": "0% 0%",
+        "opacity": "0"
+      });
+  
+      this.updateGlareSize();
+    };
+  
+    VanillaTilt.prototype.updateGlareSize = function updateGlareSize() {
+      if (this.glare) {
+        var glareSize = (this.element.offsetWidth > this.element.offsetHeight ? this.element.offsetWidth : this.element.offsetHeight) * 2;
+  
+        Object.assign(this.glareElement.style, {
+          "width": glareSize + "px",
+          "height": glareSize + "px"
+        });
+      }
+    };
+  
+    VanillaTilt.prototype.updateClientSize = function updateClientSize() {
+      this.clientWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  
+      this.clientHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    };
+  
+    VanillaTilt.prototype.onWindowResize = function onWindowResize() {
+      this.updateGlareSize();
+      this.updateClientSize();
+    };
+  
+    VanillaTilt.prototype.setTransition = function setTransition() {
+      var _this = this;
+  
+      clearTimeout(this.transitionTimeout);
+      this.element.style.transition = this.settings.speed + "ms " + this.settings.easing;
+      if (this.glare) this.glareElement.style.transition = "opacity " + this.settings.speed + "ms " + this.settings.easing;
+  
+      this.transitionTimeout = setTimeout(function () {
+        _this.element.style.transition = "";
+        if (_this.glare) {
+          _this.glareElement.style.transition = "";
+        }
+      }, this.settings.speed);
+    };
+  
+    /**
+     * Method return patched settings of instance
+     * @param {boolean} settings.reverse - reverse the tilt direction
+     * @param {number} settings.max - max tilt rotation (degrees)
+     * @param {startX} settings.startX - the starting tilt on the X axis, in degrees. Default: 0
+     * @param {startY} settings.startY - the starting tilt on the Y axis, in degrees. Default: 0
+     * @param {number} settings.perspective - Transform perspective, the lower the more extreme the tilt gets
+     * @param {string} settings.easing - Easing on enter/exit
+     * @param {number} settings.scale - 2 = 200%, 1.5 = 150%, etc..
+     * @param {number} settings.speed - Speed of the enter/exit transition
+     * @param {boolean} settings.transition - Set a transition on enter/exit
+     * @param {string|null} settings.axis - What axis should be enabled. Can be "x" or "y"
+     * @param {boolean} settings.glare - if it should have a "glare" effect
+     * @param {number} settings.max-glare - the maximum "glare" opacity (1 = 100%, 0.5 = 50%)
+     * @param {boolean} settings.glare-prerender - false = VanillaTilt creates the glare elements for you, otherwise
+     * @param {boolean} settings.full-page-listening - If true, parallax effect will listen to mouse move events on the whole document, not only the selected element
+     * @param {string|object} settings.mouse-event-element - String selector or link to HTML-element what will be listen mouse events
+     * @param {boolean} settings.reset - false = If the tilt effect has to be reset on exit
+     * @param {boolean} settings.reset-to-start - true = On reset event (mouse leave) will return to initial start angle (if startX or startY is set)
+     * @param {gyroscope} settings.gyroscope - Enable tilting by deviceorientation events
+     * @param {gyroscopeSensitivity} settings.gyroscopeSensitivity - Between 0 and 1 - The angle at which max tilt position is reached. 1 = 90deg, 0.5 = 45deg, etc..
+     * @param {gyroscopeSamples} settings.gyroscopeSamples - How many gyroscope moves to decide the starting position.
+     */
+  
+  
+    VanillaTilt.prototype.extendSettings = function extendSettings(settings) {
+      var defaultSettings = {
+        reverse: false,
+        max: 15,
+        startX: 0,
+        startY: 0,
+        perspective: 1000,
+        easing: "cubic-bezier(.03,.98,.52,.99)",
+        scale: 1,
+        speed: 300,
+        transition: true,
+        axis: null,
+        glare: false,
+        "max-glare": 1,
+        "glare-prerender": false,
+        "full-page-listening": false,
+        "mouse-event-element": null,
+        reset: true,
+        "reset-to-start": true,
+        gyroscope: true,
+        gyroscopeMinAngleX: -45,
+        gyroscopeMaxAngleX: 45,
+        gyroscopeMinAngleY: -45,
+        gyroscopeMaxAngleY: 45,
+        gyroscopeSamples: 10
+      };
+  
+      var newSettings = {};
+      for (var property in defaultSettings) {
+        if (property in settings) {
+          newSettings[property] = settings[property];
+        } else if (this.element.hasAttribute("data-tilt-" + property)) {
+          var attribute = this.element.getAttribute("data-tilt-" + property);
+          try {
+            newSettings[property] = JSON.parse(attribute);
+          } catch (e) {
+            newSettings[property] = attribute;
+          }
+        } else {
+          newSettings[property] = defaultSettings[property];
+        }
+      }
+  
+      return newSettings;
+    };
+  
+    VanillaTilt.init = function init(elements, settings) {
+      if (elements instanceof Node) {
+        elements = [elements];
+      }
+  
+      if (elements instanceof NodeList) {
+        elements = [].slice.call(elements);
+      }
+  
+      if (!(elements instanceof Array)) {
+        return;
+      }
+  
+      elements.forEach(function (element) {
+        if (!("vanillaTilt" in element)) {
+          element.vanillaTilt = new VanillaTilt(element, settings);
+        }
+      });
+    };
+  
+    return VanillaTilt;
+  }();
+  
+  if (typeof document !== "undefined") {
+    /* expose the class to window */
+    window.VanillaTilt = VanillaTilt;
+  
+    /**
+     * Auto load
+     */
+    VanillaTilt.init(document.querySelectorAll("[data-tilt]"));
+  }
+  
+  return VanillaTilt;
+  
+  }());
